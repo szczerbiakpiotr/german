@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
-    <title>Demo</title>
-
+    <title>Words</title>
+    <meta charset="ISO-8859-2">
     <link rel="stylesheet" type="text/css" href="../static/semantic/dist/semantic.min.css"
           th:href="@{/semantic/dist/semantic.min.css}"/>
 
@@ -11,12 +11,16 @@
 </head>
 <body>
 
-<div class="ui container">
+<div class="ui center text container">
 
-    <h1>Hello Demo!!</h1>
-
-    <div class="ui button positive">Good</div>
-    <div class="ui button negative">Bad</div>
+    <form class="ui form">
+        <div class="ui input">
+            <input placeholder="polskie słowo">
+        </div>
+        <div class="ui input">
+            <input placeholder="niemieckie słowo">
+        </div>
+    </form>
 
 </div>
 
