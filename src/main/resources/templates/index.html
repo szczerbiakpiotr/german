@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<html  xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Words</title>
-    <meta charset="ISO-8859-2">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link rel="stylesheet" type="text/css" href="../static/semantic/dist/semantic.min.css"
           th:href="@{/semantic/dist/semantic.min.css}"/>
 
@@ -13,13 +12,16 @@
 
 <div class="ui center text container">
 
-    <form class="ui form">
+
+    <form action="#" th:action="@{/add}" th:object="${translation}" method="post">
         <div class="ui input">
-            <input placeholder="polskie słowo">
+            <input th:field="*{original}" type="text" placeholder="polskie sĹowo"/>
         </div>
         <div class="ui input">
-            <input placeholder="niemieckie słowo">
+            <input th:field="*{translation}" type="text" placeholder="niemieckie sĹowo"/>
         </div>
+
+        <button class="ui button positive" type="submit">Add</button>
     </form>
 
 </div>
