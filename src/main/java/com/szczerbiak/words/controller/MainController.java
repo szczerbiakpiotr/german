@@ -1,5 +1,6 @@
 package com.szczerbiak.words.controller;
 
+import com.szczerbiak.words.converter.Converter;
 import com.szczerbiak.words.entity.TranslationEntity;
 import com.szczerbiak.words.model.Translation;
 import com.szczerbiak.words.repository.TranslationRepository;
@@ -20,6 +21,9 @@ public class MainController {
     @Autowired
     TranslationRepository repository;
 
+    @Autowired
+    Converter converter;
+
     @RequestMapping("/")
     public String mainPage(Model model) {
         model.addAttribute("translation", new Translation());
@@ -32,7 +36,7 @@ public class MainController {
 //        log.info("TranslationEntity: "+translation);
         log.info("Translation: " + translation);
 
-//        repository.
+        repository.save(converter.convert(translation));
 
         return "redirect:/";
     }

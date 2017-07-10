@@ -1,12 +1,11 @@
 package com.szczerbiak.words.entity;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.List;
 
 /**
@@ -14,16 +13,21 @@ import java.util.List;
  */
 
 @Entity
-@Data
 @ToString
+@Table(name = "translation")
 public class TranslationEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Getter
     private Long id;
 
+    @Getter
+    @Setter
     private String original;
 
+    @Getter
+    @Setter
     private String translation;
 
 //    private List<WordEntity> translationList;
