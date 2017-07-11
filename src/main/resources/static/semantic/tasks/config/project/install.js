@@ -437,7 +437,7 @@ module.exports = {
       {
         type: 'list',
         name: 'rtl',
-        message: 'Do you use a RTL (Right-To-Left) language?',
+        message: 'Do you use a RTL (Right-To-Left) locale?',
         when: when.notAuto,
         choices: [
           {

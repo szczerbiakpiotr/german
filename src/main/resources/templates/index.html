@@ -14,12 +14,12 @@
 <div class="ui center text container">
 
 
-    <form action="#" th:action="@{/add}" th:object="${translation}" method="post">
+    <form action="#" th:action="@{/add}" th:object="${entity}" method="post">
         <div class="ui input">
-            <input th:field="*{original}" type="text" placeholder="polskie słowo"/>
+            <input th:field="*{original.body}" type="text" placeholder="polskie słowo"/>
         </div>
         <div class="ui input">
-            <input th:field="*{translation}" type="text" placeholder="niemieckie słowo"/>
+            <input type="text" placeholder="niemieckie słowo"/>
         </div>
 
         <button class="ui button positive" type="submit">Add</button>

@@ -32,7 +32,7 @@ module.exports = function(callback) {
     return 1;
   }
 
-  // check for right-to-left (RTL) language
+  // check for right-to-left (RTL) locale
   if(config.rtl === true || config.rtl === 'Yes') {
     gulp.start('build-rtl');
     return;

@@ -446,7 +446,7 @@ i.icon.kitchen:before { content: '\eb47'}
 i.icon.label:before { content: '\e892'}
 i.icon.label.outline:before { content: '\e893'}
 i.icon.landscape:before { content: '\e3f7'}
-i.icon.language:before { content: '\e894'}
+i.icon.locale:before { content: '\e894'}
 i.icon.laptop:before { content: '\e31e'}
 i.icon.laptop.chromebook:before { content: '\e31f'}
 i.icon.laptop.mac:before { content: '\e320'}

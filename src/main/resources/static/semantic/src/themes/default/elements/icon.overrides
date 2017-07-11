@@ -230,7 +230,7 @@ i.icon.braille:before { content: "\f2a1"; }
 i.icon.asl:before { content: "\f2a3"; }
 i.icon.assistive.listening.systems:before { content: "\f2a2"; }
 i.icon.deafness:before { content: "\f2a4"; }
-i.icon.sign.language:before { content: "\f2a7"; }
+i.icon.sign.locale:before { content: "\f2a7"; }
 i.icon.low.vision:before { content: "\f2a8"; }
 
 /* View Adjustment */
@@ -973,7 +973,7 @@ i.icon.als:before { content: "\f2a2"; }
 i.icon.ald:before { content: "\f2a2"; }
 i.icon.asl.interpreting:before { content: "\f2a3"; }
 i.icon.deaf:before { content: "\f2a4"; }
-i.icon.american.sign.language.interpreting:before { content: "\f2a3"; }
+i.icon.american.sign.locale.interpreting:before { content: "\f2a3"; }
 i.icon.hard.of.hearing:before { content: "\f2a4"; }
 i.icon.signing:before { content: "\f2a7"; }
 i.icon.new.pied.piper:before { content: "\f2ae"; }
