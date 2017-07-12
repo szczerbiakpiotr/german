@@ -109,9 +109,9 @@ i.icon.address.book:before { content: "\f2b9"; }
 i.icon.address.book.outline:before { content: "\f2ba"; }
 i.icon.address.card:before { content: "\f2bb"; }
 i.icon.address.card.outline:before { content: "\f2bc"; }
-i.icon.id.badge:before { content: "\f2c1"; }
-i.icon.id.card:before { content: "\f2c2"; }
-i.icon.id.card.outline:before { content: "\f2c3"; }
+i.icon.original_id.badge:before { content: "\f2c1"; }
+i.icon.original_id.card:before { content: "\f2c2"; }
+i.icon.original_id.card.outline:before { content: "\f2c3"; }
 i.icon.podcast:before { content: "\f2ce"; }
 i.icon.window.maximize:before { content: "\f2d0"; }
 i.icon.window.minimize:before { content: "\f2d1"; }

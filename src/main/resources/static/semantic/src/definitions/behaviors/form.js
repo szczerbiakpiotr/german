@@ -1440,7 +1440,7 @@ $.fn.form.settings = {
 
     // different than another field
     different: function(value, identifier) {
-      // use either id or name of field
+      // use either original_id or name of field
       var
         $form = $(this),
         matchingValue

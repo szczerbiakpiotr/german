@@ -13,21 +13,19 @@ import java.util.Locale;
 @Entity
 @Data
 @RequiredArgsConstructor()
-//@Table(name = "word")
-public class WordEntity implements Serializable {
+@Table(name = "original_word")
+public class OriginalWordEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String body;
-    private Locale locale;
+    private Locale locale = new Locale("PL");
 
-    @ManyToOne
-    @JoinColumn(name = "book_category_id")
-    private TranslationEntity xxx;
+    @OneToOne(mappedBy = "original",optional = false,cascade = CascadeType.ALL)
+    private TranslationEntity translationEntity;
 
-    public WordEntity(String body, Locale locale) {
+    public OriginalWordEntity(String body) {
         this.body = body;
-        this.locale = locale;
     }
 }

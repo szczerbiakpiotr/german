@@ -282,7 +282,7 @@ $.fn.embed = function(parameters) {
               url
             ;
             url = (sources[source] !== undefined)
-              ? sources[source].url.replace('{id}', id)
+              ? sources[source].url.replace('{original_id}', id)
               : false
             ;
             if(url) {
@@ -626,7 +626,7 @@ $.fn.embed.settings = {
       type   : 'video',
       icon   : 'video play',
       domain : 'youtube.com',
-      url    : '//www.youtube.com/embed/{id}',
+      url    : '//www.youtube.com/embed/{original_id}',
       parameters: function(settings) {
         return {
           autohide       : !settings.brandedUI,
@@ -643,7 +643,7 @@ $.fn.embed.settings = {
       type   : 'video',
       icon   : 'video play',
       domain : 'vimeo.com',
-      url    : '//player.vimeo.com/video/{id}',
+      url    : '//player.vimeo.com/video/{original_id}',
       parameters: function(settings) {
         return {
           api      : settings.api,

@@ -742,11 +742,11 @@ $.fn.search = function(parameters) {
               // start char code for "A"
               letterID = String.fromCharCode(97 + categoryIndex);
               id          = letterID + resultID;
-              module.verbose('Creating category result id', id);
+              module.verbose('Creating category result original_id', id);
             }
             else {
               id = resultID;
-              module.verbose('Creating result id', id);
+              module.verbose('Creating result original_id', id);
             }
             return id;
           },

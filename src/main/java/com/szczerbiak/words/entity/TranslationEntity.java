@@ -6,7 +6,6 @@ import lombok.ToString;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 /**
  * Created by piotr.szczerbiak on 07.07.2017.
@@ -15,17 +14,17 @@ import java.util.Set;
 @Entity
 @Data
 @ToString
-//@Table(name = "translation")
+@Table(name = "translation")
 public class TranslationEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private WordEntity original;
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "xxx")
-    @ElementCollection(targetClass = WordEntity.class)
-    private List<WordEntity> translationList = new ArrayList<WordEntity>();
+    @OneToOne(cascade = CascadeType.ALL)
+    private OriginalWordEntity original;
 
-//    private List<WordEntity> translationList;
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<TranslatedWordEntity> translationList = new ArrayList<TranslatedWordEntity>();
+
 }

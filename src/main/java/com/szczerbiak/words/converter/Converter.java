@@ -1,9 +1,5 @@
 package com.szczerbiak.words.converter;
 
-import com.szczerbiak.words.entity.TranslationEntity;
-import com.szczerbiak.words.entity.WordEntity;
-import com.szczerbiak.words.model.Translation;
-import com.szczerbiak.words.model.Word;
 import org.springframework.stereotype.Service;
 
 /**
@@ -26,14 +22,14 @@ public class Converter {
 //        return entity;
 //    }
 //
-//    public WordEntity convert (Word word){
-//        WordEntity entity = new WordEntity();
+//    public TranslatedWordEntity convert (Word word){
+//        TranslatedWordEntity entity = new TranslatedWordEntity();
 //        entity.setBody(word.getBody());
 //        entity.setLocale(word.getLocale());
 //        return entity;
 //    }
 //
-//    public Word convert (WordEntity entity){
+//    public Word convert (TranslatedWordEntity entity){
 //        Word word = new Word();
 //        word.setBody(entity.getBody());
 //        word.setLocale(entity.getLocale());

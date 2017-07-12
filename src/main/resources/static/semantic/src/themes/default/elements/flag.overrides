@@ -397,7 +397,7 @@ i.flag.hu:before,
 i.flag.hungary:before {
   background-position: -36px -598px;
 }
-i.flag.id:before,
+i.flag.original_id:before,
 i.flag.indonesia:before {
   background-position: -36px -624px;
 }
