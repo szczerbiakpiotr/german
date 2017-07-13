@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Words</title>
+    <title>All words</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link rel="stylesheet" type="text/css" href="../static/semantic/dist/semantic.min.css"
           th:href="@{/semantic/dist/semantic.min.css}"/>
@@ -12,25 +12,13 @@
 <body>
 
 <div class="ui center text container">
-
-
-    <form action="#" th:action="@{/add}" th:object="${entity}" method="post">
-        <div class="original container">
-            <div class="ui input">
-                <input th:field="*{original.body}" type="text" placeholder="pl"/>
-            </div>
+    <span th:text="${#lists.size(translations)}"></span>
+    <div th:each="t : ${translations}" th:id="${t.id}" class="ui container">
+        <span th:text="${t.id}+'. '+${t.original.body}"/>
+        <div th:each="xx : ${t.translationList}" th:id="${xx.id}">
+            <span th:text="${t.id}+'.'+${xx.id}+'. '+${xx.body}"/>
         </div>
-        <div class="translated container">
-            <div class="ui input">
-                <input name="translated_body" type="text" placeholder="de"/>
-            </div>
-        </div>
-
-        <button class="ui button positive" type="submit">Add</button>
-
-    </form>
-
-
+    </div>
 </div>
 
 <script src="../static/vendor/jquery-3.2.1.min.js" th:href="@{/vendor/jquery-3.2.1.min.js}"></script>

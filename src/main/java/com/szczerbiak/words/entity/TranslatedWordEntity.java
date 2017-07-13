@@ -2,9 +2,9 @@ package com.szczerbiak.words.entity;
 
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.*;
-import java.io.Serializable;
 import java.util.Locale;
 
 /**
@@ -12,6 +12,7 @@ import java.util.Locale;
  */
 @Entity
 @Data
+@ToString
 @RequiredArgsConstructor()
 @Table(name = "translated_word")
 public class TranslatedWordEntity {

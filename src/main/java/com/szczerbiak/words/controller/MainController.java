@@ -5,6 +5,7 @@ import com.szczerbiak.words.entity.OriginalWordEntity;
 import com.szczerbiak.words.entity.TranslatedWordEntity;
 import com.szczerbiak.words.entity.TranslationEntity;
 import com.szczerbiak.words.repository.TranslationRepository;
+import com.szczerbiak.words.service.TranslationService;
 import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,10 +24,7 @@ import java.util.Locale;
 public class MainController {
 
     @Autowired
-    TranslationRepository repository;
-
-    @Autowired
-    Converter converter;
+    TranslationService translationService;
 
     @RequestMapping("/")
     public String mainPage(Model model) {
@@ -40,13 +38,17 @@ public class MainController {
 //        log.info("Original: "+original);
 //        log.info("TranslationEntity: "+translation);
         log.info("Translation: " + entity);
+        log.info("translated_body: " + translatedBody);
 
-        log.info("translated_body: "+translatedBody);
-
-        String[] splitted = translatedBody.split(",");
-
+        translationService.saveTranslation(entity, translatedBody);
 //        repository.save(entity);
 
         return "redirect:/";
+    }
+
+    @RequestMapping("/translations")
+    public String showTranslations(Model model) {
+        model.addAttribute("translations", translationService.getTranslations());
+        return "list";
     }
 }
