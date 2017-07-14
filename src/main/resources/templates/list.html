@@ -10,13 +10,22 @@
 
 </head>
 <body>
-
+<div class="ui hidden divider"></div>
+<div class="ui hidden divider"></div>
+<div class="ui hidden divider"></div>
+<div th:replace="../fragments/menu :: menu"></div>
 <div class="ui center text container">
-    <span th:text="${#lists.size(translations)}"></span>
-    <div th:each="t : ${translations}" th:id="${t.id}" class="ui container">
-        <span th:text="${t.id}+'. '+${t.original.body}"/>
-        <div th:each="xx : ${t.translationList}" th:id="${xx.id}">
-            <span th:text="${t.id}+'.'+${xx.id}+'. '+${xx.body}"/>
+    <div class="ui cards">
+        <div class="card" th:each="t : ${translations}" th:id="${t.id}">
+            <div class="content">
+                <div class="header" th:text="${t.original.body}"></div>
+                <!--<div class="meta">Friend</div>-->
+                <div class="description">
+                    <p th:each="xx : ${t.translationList}" th:id="${xx.id}">
+                        <span th:text="${xx.body}"/>
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
