@@ -13,6 +13,8 @@ public interface TranslationService {
 
     void saveTranslation(TranslationEntity entity, String translatedBody);
 
+    void saveTranslation(TranslationEntity entity);
+
     List<TranslationEntity> getTranslations();
 
 }

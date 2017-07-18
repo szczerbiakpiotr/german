@@ -40,6 +40,11 @@ public class TranslationServiceImpl implements TranslationService {
     }
 
     @Override
+    public void saveTranslation(TranslationEntity entity) {
+        repository.save(entity);
+    }
+
+    @Override
     public List<TranslationEntity> getTranslations() {
         List<TranslationEntity> result = repository.findAll();
 /*        for (TranslationEntity entity : result){
